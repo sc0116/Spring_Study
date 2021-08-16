@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .target {
+        background-color: palevioletred;
+    }
+</style>
+    <ul>
+        <li th:each="dto : ${list}" th:class="${dto.sno % 5 == 0}? 'target'" th:text="${dto}"></li>
+    </ul>
+</body>
+</html>
